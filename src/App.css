@@ -1,21 +1,50 @@
 .form-container{
-  text-align: center;
+  border-radius: 15px 50px 30px;
+  background: lightblue;
   padding-top: 100px;
+
+  width: 400px;
+  height: 250px;
+  text-align: center;
 }
+
 .field{
-  display: block;
-   margin-left: auto;
-   margin-right: auto;
    border-color: blue;
-   color: green;
+   border-radius: 15px;
+   width: 200px;
+   height: 20px;
+   text-align: center;
+
+}
+.reg-form
+{
+  color:white;
+  font-family: "Gill Sans", sans-serif;
 }
 body{
   background-color: lightgreen;
+  padding-top: 100px;
+  padding-left:300px;
+
 }
 span{
   color: red;
 }
-#succes{
+#success{
   color:blue;
   background-color: white;
+  width: 200px;
+  height: 20px;
+  text-align: center;
+}
+#submit{
+  width: 150px;
+  height: 40px;
+  color: white;
+  background: blue;
+  border-radius: 15px;
+  text-align: center;
+}
+.background{
+  text-align: center;
 }
