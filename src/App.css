@@ -2,8 +2,7 @@
   border-radius: 15px 50px 30px;
   background: lightblue;
   padding-top: 100px;
-
-  width: 400px;
+  width: 900px;
   height: 300px;
   text-align: center;
 }
@@ -11,15 +10,15 @@
 .field{
    border-color: blue;
    border-radius: 15px;
-   width: 200px;
+   width: 250px;
    height: 20px;
    text-align: center;
 
 }
 .reg-form
 {
-  color:white;
   font-family: "Gill Sans", sans-serif;
+
 }
 body{
   background-color: lightgreen;
@@ -45,6 +44,9 @@ span{
   background: blue;
   border-radius: 15px;
   text-align: center;
+  font-family: "Arial";
+  font-weight: bold;
+
 }
 .background{
   text-align: center;
