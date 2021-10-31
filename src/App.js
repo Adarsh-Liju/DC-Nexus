@@ -7,8 +7,8 @@ function App() {
     email:"",
   });
   const handleSubmit=(event)=>{
+    alert("Thanks for the feedback!!")
     event.preventDefault();
-
     setSubmitted(true);
   }
   const [submitted,setSubmitted]=useState(false)
@@ -22,11 +22,11 @@ function App() {
     setValues({...values,email:event.target.value})
   }
 
+
     return(
       <div className="background">
       <div className="form-container" >
         <form className="reg-form" onSubmit={handleSubmit}>
-          {submitted ? <div id="success">Thanks for the Feedback!</div>:null}
           <label>First Name</label><br/>
           <input
           onChange={handleFirstNameInputChange}
@@ -49,8 +49,8 @@ function App() {
           value={values.email}
           className="field"
           placeholder="Email"
-          name="email"/><br/><br/>
-          {submitted && !values.email ?<span>Please enter an email address<br/></span>:null}
+          name="email"/><br/>
+          {submitted && !values.email ?<span>Please enter an email address<br/><br/></span>:null}
           <button type="submit" id="submit">Submit</button><br/>
         </form>
       </div>
