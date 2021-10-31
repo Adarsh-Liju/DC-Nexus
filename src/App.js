@@ -23,6 +23,7 @@ function App() {
   }
 
     return(
+      <div className="background">
       <div className="form-container">
         <form className="reg-form" onSubmit={handleSubmit}>
           {submitted ? <div id="succes">Thanks for the Feedback!</div>:null}
@@ -31,24 +32,25 @@ function App() {
           value={values.firstName}
           className="field"
           placeholder="First Name"
-          name="firstName"/><br/>
-          {submitted && !values.firstName ?<span>Please enter a first name</span>:null}
+          name="firstName"/>
+          {submitted && !values.firstName ?<span>Please enter a first name<br/></span>:null}
           <input
           onChange={handleLastNameInputChange}
           value={values.lastName}
           className="field"
           placeholder="Last Name"
-          name="lastName"/><br/>
-          {submitted && !values.lastName ?<span>Please enter a last name</span>:null}
+          name="lastName"/>
+          {submitted && !values.lastName ?<span>Please enter a last name<br/></span>:null}
           <input
           onChange={handleEmailInputChange}
           value={values.email}
           className="field"
           placeholder="Email"
           name="email"/><br/>
-          {submitted && !values.email ?<span>Please enter an email address</span>:null}
-          <button type="submit">Submit</button>
+          {submitted && !values.email ?<span>Please enter an email address<br/></span>:null}
+          <button type="submit">Submit</button><br/>
         </form>
+      </div>
       </div>
   );
 }
