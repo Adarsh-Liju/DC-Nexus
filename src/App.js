@@ -24,37 +24,59 @@ function App() {
 
 
     return(
-      <div className="background">
-      <div className="form-container" >
-        <form className="reg-form" onSubmit={handleSubmit}>
-          <label>First Name</label><br/>
-          <input
-          onChange={handleFirstNameInputChange}
-          value={values.firstName}
-          className="field"
-          placeholder="First Name"
-          name="firstName"/><br/>
-          {submitted && !values.firstName ?<span>Please enter a first name<br/></span>:null}
-          <label>Last Name</label><br/>
-          <input
-          onChange={handleLastNameInputChange}
-          value={values.lastName}
-          className="field"
-          placeholder="Last Name"
-          name="lastName"/><br/>
-          {submitted && !values.lastName ?<span>Please enter a last name<br/></span>:null}
-          <label>Email Address</label><br/>
-          <input
-          onChange={handleEmailInputChange}
-          value={values.email}
-          className="field"
-          placeholder="Email"
-          name="email"/><br/>
-          {submitted && !values.email ?<span>Please enter an email address<br/><br/></span>:null}
-          <button type="submit" id="submit">Submit</button><br/>
-        </form>
+      <div class="background">
+      <div class="container">
+        <div class="screen">
+          <div class="screen-header">
+            <div class="screen-header-left">
+              <div class="screen-header-button close"></div>
+              <div class="screen-header-button maximize"></div>
+              <div class="screen-header-button minimize"></div>
+            </div>
+            <div class="screen-header-right">
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+            </div>
+          </div>
+          <div class="screen-body">
+            <div class="screen-body-item left">
+              <div class="app-title">
+                <span>CONTACT</span>
+                <span>US</span>
+              </div>
+              <div class="app-contact">CONTACT INFO :+91 8088229177</div>
+            </div>
+            <div class="screen-body-item">
+              <div class="app-form">
+                <div class="app-form-group">
+                  <input class="app-form-control" placeholder="FIRST NAME" type="text" onChange={handleFirstNameInputChange}/>
+                </div>
+                <div class="app-form-group">
+                  <input class="app-form-control" placeholder="LAST NAME" type="text" onChange={handleLastNameInputChange}/>
+                </div>
+                <div class="app-form-group">
+                  <input class="app-form-control" placeholder="EMAIL" type="email" onChange={handleEmailInputChange}/>
+                </div>
+                <div class="app-form-group">
+                  <input class="app-form-control" placeholder="CONTACT NO" type="tel"/>
+                </div>
+                <div class="app-form-group message">
+                  <input class="app-form-control" placeholder="MESSAGE"/>
+                </div>
+                <div class="app-form-group buttons">
+                  <button class="app-form-button">CANCEL</button>
+                  <button class="app-form-button" onSubmit={handleSubmit}>SEND</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
       </div>
-      </div>
+    </div>
+    
+       
   );
 }
 
