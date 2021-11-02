@@ -9,9 +9,7 @@ function App() {
   const handleSubmit=(event)=>{
     alert("Thanks for the feedback!!")
     event.preventDefault();
-    setSubmitted(true);
   }
-  const [submitted,setSubmitted]=useState(false)
   const handleFirstNameInputChange=(event)=>{
     setValues({...values,firstName:event.target.value})
   }
@@ -62,7 +60,7 @@ function App() {
                   <input class="app-form-control" placeholder="CONTACT NO" type="tel"/>
                 </div>
                 <div class="app-form-group message">
-                  <input class="app-form-control" placeholder="MESSAGE"/>
+                  <input class="app-form-control" placeholder="YOUR QUERY"/>
                 </div>
                 <div class="app-form-group buttons">
                   <button class="app-form-button">CANCEL</button>
