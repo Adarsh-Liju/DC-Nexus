@@ -1,28 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import './App.css'
+
 function App() {
-  const [values,setValues]=useState({
+  var values={
     firstName:"",
     lastName:"",
     email:"",
-  });
+  };
   const handleSubmit=(event)=>{
     alert("Thanks for the feedback!!")
     event.preventDefault();
+    console.log(values)
   }
-  const handleFirstNameInputChange=(event)=>{
-    setValues({...values,firstName:event.target.value})
-  }
-  const handleLastNameInputChange=(event)=>{
-    setValues({...values,lastName:event.target.value})
-  }
-  const handleEmailInputChange=(event)=>{
-    setValues({...values,email:event.target.value})
-  }
-
-
     return(
       <div class="background">
+           
       <div class="container">
         <div class="screen">
           <div class="screen-header">
@@ -48,13 +40,13 @@ function App() {
             <div class="screen-body-item">
               <div class="app-form">
                 <div class="app-form-group">
-                  <input class="app-form-control" placeholder="FIRST NAME" type="text" onChange={handleFirstNameInputChange}/>
+                  <input class="app-form-control" placeholder="FIRST NAME" type="text" />
                 </div>
                 <div class="app-form-group">
-                  <input class="app-form-control" placeholder="LAST NAME" type="text" onChange={handleLastNameInputChange}/>
+                  <input class="app-form-control" placeholder="LAST NAME" type="text" />
                 </div>
                 <div class="app-form-group">
-                  <input class="app-form-control" placeholder="EMAIL" type="email" onChange={handleEmailInputChange}/>
+                  <input class="app-form-control" placeholder="EMAIL" type="email" />
                 </div>
                 <div class="app-form-group">
                   <input class="app-form-control" placeholder="CONTACT NO" type="tel"/>
@@ -71,7 +63,7 @@ function App() {
           </div>
         </div>
         
-      </div>
+      </div>          
     </div>
     
        
