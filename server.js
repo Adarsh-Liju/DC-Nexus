@@ -15,11 +15,11 @@ const feedback = {
 const NewFeedback = mongoose.model("form", feedback);
 
 
-app.get("/feedback", function (req, res) {
+app.get("/", function (req, res) {
   res.sendFile(__dirname + "/feedbackform.html");
 });
 
-app.post("/feedback", function (req, res) {
+app.post("/", function (req, res) {
   let newdoc = new NewFeedback({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -28,9 +28,9 @@ app.post("/feedback", function (req, res) {
     query: req.body.query,
   });
   newdoc.save();
-  res.redirect("/feedback");
+  res.redirect("/");
 });
 
 app.listen(port, function () {
-  console.log("Server is Running");
+  console.log("Server is Running at ",port);
 });
