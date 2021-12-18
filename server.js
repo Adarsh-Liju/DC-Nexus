@@ -3,8 +3,9 @@ const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const port=5000;
+const URL = // add your MongoDB Atlas URL here 
 app.use(bodyParser.urlencoded({ extended: true }));
-mongoose.connect("mongodb+srv://adarsh:ala@cluster0.w4nwc.mongodb.net/web-tech"); 
+mongoose.connect(URL); 
 const feedback = {
   firstName: String,
   lastName: String,
